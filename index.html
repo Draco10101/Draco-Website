@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050a08">
+
+<title>Juan Claude De Jager | IT Developer</title>
+
+<meta name="description" content="Juan Claude De Jager - Data Analyst, IT Developer, Web Developer, Designer and Technology Consultant based in Kuruman, South Africa.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #050a08;
+    --panel: #0b1510;
+    --green: #00ff88;
+    --green2: #00c96b;
+    --text: #e5f5eb;
+    --muted: #91a99a;
+    --border: rgba(0,255,136,.17);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5,10,8,.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--green);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 13px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.menu-btn {
+    display: none;
+    color: var(--green);
+    font-size: 27px;
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: var(--green);
+    opacity: .08;
+    filter: blur(130px);
+    border-radius: 50%;
+    right: -100px;
+    top: 100px;
+}
+
+.terminal {
+    color: var(--green);
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(35px, 7vw, 72px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--green);
+    text-shadow: 0 0 25px rgba(0,255,136,.3);
+}
+
+.hero p {
+    color: var(--muted);
+    max-width: 680px;
+    font-size: 16px;
+}
+
+.typing {
+    color: var(--green);
+    min-height: 30px;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    color: var(--green);
+    transition: .3s;
+    font-weight: 600;
+}
+
+.btn.primary {
+    background: var(--green);
+    color: #001b0d;
+}
+
+.btn:hover {
+    box-shadow: 0 0 25px rgba(0,255,136,.3);
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 90px 0;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(24px, 4vw, 35px);
+    margin-bottom: 12px;
+}
+
+.section-title span {
+    color: var(--green);
+}
+
+.section-intro {
+    color: var(--muted);
+    margin-bottom: 35px;
+    max-width: 700px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 35px;
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+}
+
+.panel h3 {
+    color: var(--green);
+    margin-bottom: 15px;
+}
+
+.panel p {
+    color: var(--muted);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+}
+
+.info span:first-child {
+    color: var(--muted);
+}
+
+.info span:last-child {
+    color: var(--green);
+    text-align: right;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
+    gap: 18px;
+}
+
+.skill-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 23px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.skill-card:hover,
+.project:hover {
+    transform: translateY(-5px);
+    border-color: var(--green);
+}
+
+.skill-card h3 {
+    color: var(--green);
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.skill-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech {
+    border: 1px solid var(--border);
+    background: #0b1911;
+    color: var(--green);
+    padding: 9px 15px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.project {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 9px;
+    transition: .3s;
+}
+
+.project .number {
+    font-family: 'Orbitron';
+    color: var(--green);
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.project h3 {
+    margin-bottom: 12px;
+}
+
+.project p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.project .stack {
+    margin-top: 18px;
+    color: var(--green);
+    font-size: 12px;
+}
+
+.working-list {
+    list-style: none;
+}
+
+.working-list li {
+    padding: 13px;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.working-list li::before {
+    content: "▹ ";
+    color: var(--green);
+}
+
+.github-box {
+    text-align: center;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.github-box p {
+    color: var(--muted);
+    margin: 12px 0 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 18px;
+}
+
+.contact-item {
+    background: var(--panel);
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.contact-item h3 {
+    color: var(--green);
+    font-size: 15px;
+}
+
+.contact-item p {
+    color: var(--muted);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--green);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: .7s;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(max-width:750px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #08110c;
+        flex-direction: column;
+        padding: 25px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+}
+
+.github-profile {
+    display:flex;
+    align-items:center;
+    gap:24px;
+    padding:25px;
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    margin-bottom:22px;
+    overflow-wrap:anywhere;
+}
+.github-profile img {
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid var(--green);
+}
+.github-profile h3 {
+    color:var(--green);
+    font-family:'Orbitron',sans-serif;
+    margin-bottom:8px;
+}
+.github-profile p { color:var(--muted); margin-bottom:15px; }
+.github-stats {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(125px,1fr));
+    gap:12px;
+    margin:20px 0 35px;
+}
+.gh-stat {
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:20px 10px;
+    text-align:center;
+}
+.gh-stat strong {
+    display:block;
+    color:var(--green);
+    font-family:'Orbitron',sans-serif;
+    font-size:25px;
+}
+.gh-stat span { color:var(--muted); font-size:12px; }
+.gh-heading {
+    font-family:'Orbitron',sans-serif;
+    margin-bottom:20px;
+    color:var(--green);
+}
+.gh-status { color:var(--muted); margin-top:20px; font-size:13px; }
+.gh-repo {
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+.gh-repo a { color:var(--green); font-weight:700; }
+.gh-repo p { color:var(--muted); font-size:13px; overflow-wrap:anywhere; }
+.gh-meta { color:var(--muted); font-size:12px; }
+@media(max-width:500px) {
+    .github-profile { flex-direction:column; align-items:flex-start; }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-inner">
+    <a href="#home" class="logo">DRACO<span>1010</span></a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+</nav>
+
+<main>
+
+<section class="hero" id="home">
+<div class="container reveal">
+
+    <div class="terminal">
+        root@draco1010:~$ whoami
+    </div>
+
+    <h1>HI, I'M<br>
+    <span>JUAN CLAUDE</span></h1>
+
+    <div class="typing" id="typing"></div>
+
+    <p>
+    Data Analyst, IT Developer, Web Developer, Designer
+    and Technology Consultant based in Kuruman, South Africa.
+    I build practical digital solutions, explore technology
+    and turn complex problems into opportunities.
+    </p>
+
+    <div class="buttons">
+        <a href="#projects" class="btn primary">Explore My Work</a>
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
+
+</div>
+</section>
+
+<section id="about">
+<div class="container reveal">
+
+    <h2 class="section-title">ABOUT <span>ME</span></h2>
+
+    <p class="section-intro">
+    Technology enthusiast. Problem solver. Developer.
+    Always learning, building and improving.
+    </p>
+
+    <div class="about-grid">
+
+        <div class="panel">
+            <h3>Who Am I?</h3>
+
+            <p>
+            I'm a multi-disciplinary technology professional
+            with interests in data analysis, IT development,
+            web design, networking, automation and digital
+            marketing.
+
+            <br><br>
+
+            My approach combines technical knowledge with
+            practical business thinking. I enjoy finding
+            solutions, building useful tools and helping
+            individuals and organizations improve their
+            digital capabilities.
+
+            <br><br>
+
+            I believe in versatility, continuous learning
+            and creating technology that delivers real value.
+            </p>
+        </div>
+
+        <div class="panel">
+            <h3>Profile Information</h3>
+
+            <div class="info">
+                <span>Name</span>
+                <span>Juan Claude De Jager</span>
+            </div>
+
+            <div class="info">
+                <span>Location</span>
+                <span>Kuruman, SA</span>
+            </div>
+
+            <div class="info">
+                <span>Profession</span>
+                <span>IT Developer</span>
+            </div>
+
+            <div class="info">
+                <span>Speciality</span>
+                <span>Multi-disciplinary Tech</span>
+            </div>
+
+            <div class="info">
+                <span>Environment</span>
+                <span>Linux / Termux</span>
+            </div>
+
+            <div class="info">
+                <span>Status</span>
+                <span>Always Learning</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container reveal">
+
+    <h2 class="section-title">CORE <span>SKILLS</span></h2>
+
+    <p class="section-intro">
+    A diverse collection of technical and professional interests.
+    </p>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <h3>01 / Data & Analysis</h3>
+            <p>Data analysis, research, business insights,
+            reporting, digital intelligence and trends.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>02 / IT & Support</h3>
+            <p>System troubleshooting, networking,
+            hardware, software and technical support.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>03 / Development</h3>
+            <p>Web development, scripting, automation,
+            front-end design and tool building.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>04 / Design & Marketing</h3>
+            <p>Web design, branding, digital content,
+            social media and online marketing.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>05 / Consulting</h3>
+            <p>Technical guidance, problem solving,
+            digital strategy and business solutions.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>06 / Technology</h3>
+            <p>Linux environments, Termux, networking,
+            command-line tools and automation.</p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<section id="technology">
+<div class="container reveal">
+
+    <h2 class="section-title">TECH <span>STACK</span></h2>
+
+    <p class="section-intro">
+    Technologies and platforms I'm interested in working with
+    and developing further.
+    </p>
+
+    <div class="tech-list">
+        <span class="tech">HTML5</span>
+        <span class="tech">CSS3</span>
+        <span class="tech">JavaScript</span>
+        <span class="tech">Python</span>
+        <span class="tech">PHP</span>
+        <span class="tech">Node.js</span>
+        <span class="tech">Linux</span>
+        <span class="tech">Termux</span>
+        <span class="tech">Git</span>
+        <span class="tech">GitHub</span>
+        <span class="tech">Networking</span>
+        <span class="tech">Automation</span>
+        <span class="tech">Databases</span>
+        <span class="tech">Web Development</span>
+    </div>
+
+</div>
+</section>
+
+<section id="projects">
+<div class="container reveal">
+
+    <h2 class="section-title">FEATURED <span>PROJECTS</span></h2>
+
+    <p class="section-intro">
+    A growing collection of development experiments,
+    practical tools and digital solutions.
+    </p>
+
+    <div class="projects-grid">
+
+        <div class="project">
+            <div class="number">01</div>
+            <h3>Termux Environment Simulator</h3>
+            <p>A Python-based project exploring
+            command-line environments, utilities
+            and interactive terminal experiences.</p>
+            <div class="stack">PYTHON / TERMINAL / LINUX</div>
+        </div>
+
+        <div class="project">
+            <div class="number">02</div>
+            <h3>Dragon Cyber Toolkit</h3>
+            <p>A personal technology environment
+            focused on command-line utilities,
+            scripting and practical development tools.</p>
+            <div class="stack">PYTHON / TERMUX / AUTOMATION</div>
+        </div>
+
+        <div class="project">
+            <div class="number">03</div>
+            <h3>Digital Web Solutions</h3>
+            <p>Website design and digital solutions
+            for personal brands, freelancers
+            and businesses.</p>
+            <div class="stack">HTML / CSS / JAVASCRIPT</div>
+        </div>
+
+    </div>
+
+    <p style="color:var(--muted);font-size:12px;margin-top:20px">
+    Project descriptions are portfolio summaries.
+    Add repository links as projects are published.
+    </p>
+
+</div>
+</section>
+
+<section id="working">
+<div class="container reveal">
+
+    <h2 class="section-title">CURRENTLY <span>BUILDING</span></h2>
+
+    <div class="panel">
+        <ul class="working-list">
+            <li>Developing practical Python tools and scripts.</li>
+            <li>Exploring Linux and Termux development.</li>
+            <li>Improving web development capabilities.</li>
+            <li>Building automation and smarter workflows.</li>
+            <li>Expanding IT troubleshooting knowledge.</li>
+            <li>Exploring digital intelligence and research.</li>
+        </ul>
+    </div>
+
+</div>
+</section>
+
+
+<section id="github">
+<div class="container reveal">
+    <h2 class="section-title">GITHUB <span>INTELLIGENCE</span></h2>
+    <p class="section-intro">Live public profile and development activity.</p>
+
+    <div class="github-profile">
+        <img id="gh-avatar" src="https://github.com/Draco10101.png"
+             alt="GitHub profile picture">
+        <div>
+            <h3 id="gh-name">DRACO10101</h3>
+            <p id="gh-bio">Loading GitHub profile...</p>
+            <a href="https://github.com/Draco10101"
+               target="_blank" rel="noopener" class="btn">
+               View GitHub Profile ↗
+            </a>
+        </div>
+    </div>
+
+    <div class="github-stats">
+        <div class="gh-stat"><strong id="gh-repos">--</strong><span>Repositories</span></div>
+        <div class="gh-stat"><strong id="gh-followers">--</strong><span>Followers</span></div>
+        <div class="gh-stat"><strong id="gh-following">--</strong><span>Following</span></div>
+        <div class="gh-stat"><strong id="gh-stars">--</strong><span>Stars</span></div>
+        <div class="gh-stat"><strong id="gh-forks">--</strong><span>Forks</span></div>
+    </div>
+
+    <h3 class="gh-heading">LATEST REPOSITORIES</h3>
+    <div id="gh-repository-list" class="projects-grid">
+        <p>Connecting to GitHub...</p>
+    </div>
+
+    <p id="gh-status" class="gh-status" aria-live="polite">
+        Loading public GitHub data...
+    </p>
+</div>
+</section>
+
+
+<section id="contact">
+<div class="container reveal">
+
+    <h2 class="section-title">LET'S <span>CONNECT</span></h2>
+
+    <p class="section-intro">
+    Have a project, technical challenge or business idea?
+    Let's connect and explore possibilities.
+    </p>
+
+    <div class="contact-grid">
+
+        <div class="contact-item">
+            <h3>EMAIL</h3>
+            <p>juanclaude19981002@gmail.com</p>
+            <a class="tech"
+            href="mailto:juanclaude19981002@gmail.com">
+            Send Email
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <h3>FACEBOOK</h3>
+            <p>Connect with me on Facebook.</p>
+            <a class="tech" href="https://facebook.com/"
+            target="_blank" rel="noopener">Facebook</a>
+        </div>
+
+        <div class="contact-item">
+            <h3>TIKTOK</h3>
+            <p>Follow my digital journey.</p>
+            <a class="tech" href="https://tiktok.com/"
+            target="_blank" rel="noopener">TikTok</a>
+        </div>
+
+        <div class="contact-item">
+            <h3>WHATSAPP</h3>
+            <p>Available for direct contact.</p>
+            <a class="tech"
+            href="https://wa.me/"
+            target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>Designed & Built by <span>Juan Claude De Jager</span></p>
+        <p>DRACO1010 © <span id="year"></span> | Built with passion and code.</p>
+        <p>Technology • Creativity • Innovation</p>
+    </div>
+</footer>
+
+<script>
+const roles = [
+    "Data Analyst",
+    "IT Developer",
+    "Web Developer",
+    "Technology Consultant",
+    "Designer",
+    "Digital Marketing Specialist"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typing = document.getElementById("typing");
+
+function typeEffect() {
+    const current = roles[roleIndex];
+
+    typing.textContent = current.substring(0, charIndex);
+
+    if (!deleting && charIndex < current.length) {
+        charIndex++;
+        setTimeout(typeEffect, 90);
+    } else if (deleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(typeEffect, 45);
+    } else {
+        deleting = !deleting;
+
+        if (!deleting) {
+            roleIndex = (roleIndex + 1) % roles.length;
+        }
+
+        setTimeout(typeEffect, deleting ? 1300 : 300);
+    }
+}
+
+typeEffect();
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(".reveal").forEach(element => {
+    observer.observe(element);
+});
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+<script>
+
+// DRACO10101 - Live GitHub integration
+(async function loadGitHub() {
+    const username = "Draco10101";
+    const status = document.getElementById("gh-status");
+    const list = document.getElementById("gh-repository-list");
+
+    const safe = value => String(value ?? "").replace(
+        /[&<>"']/g,
+        c => ({
+            "&":"&amp;", "<":"&lt;", ">":"&gt;",
+            '"':"&quot;", "'":"&#39;"
+        }[c])
+    );
+
+    try {
+        const headers = {
+            "Accept": "application/vnd.github+json"
+        };
+
+        const [profileResponse, reposResponse] = await Promise.all([
+            fetch(`https://api.github.com/users/${username}`, {headers}),
+            fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`, {headers})
+        ]);
+
+        if (profileResponse.status === 404) {
+            throw new Error("GitHub account not found. Check the username.");
+        }
+
+        if (profileResponse.status === 403 || reposResponse.status === 403) {
+            throw new Error("GitHub API rate limit reached. Try again later.");
+        }
+
+        if (!profileResponse.ok || !reposResponse.ok) {
+            throw new Error("GitHub API could not be reached.");
+        }
+
+        const user = await profileResponse.json();
+        const repos = await reposResponse.json();
+
+        document.getElementById("gh-avatar").src = user.avatar_url;
+        document.getElementById("gh-name").textContent =
+            user.name || user.login;
+
+        document.getElementById("gh-bio").textContent =
+            user.bio || "Developer | Technology enthusiast | Always learning.";
+
+        document.getElementById("gh-repos").textContent =
+            user.public_repos;
+
+        document.getElementById("gh-followers").textContent =
+            user.followers;
+
+        document.getElementById("gh-following").textContent =
+            user.following;
+
+        const stars = repos.reduce((sum, r) => sum + r.stargazers_count, 0);
+        const forks = repos.reduce((sum, r) => sum + r.forks_count, 0);
+
+        document.getElementById("gh-stars").textContent = stars;
+        document.getElementById("gh-forks").textContent = forks;
+
+        const latest = repos.slice(0, 6);
+
+        if (!latest.length) {
+            list.innerHTML = "<p>No public repositories yet.</p>";
+        } else {
+            list.innerHTML = latest.map(repo => `
+                <article class="project gh-repo">
+                    <div class="number">01 / REPOSITORY</div>
+                    <h3>
+                        <a href="${safe(repo.html_url)}"
+                           target="_blank" rel="noopener">
+                           ${safe(repo.name)} ↗
+                        </a>
+                    </h3>
+                    <p>${safe(repo.description || "No description provided.")}</p>
+                    <div class="gh-meta">
+                        ${safe(repo.language || "Language not specified")}
+                        · ★ ${repo.stargazers_count}
+                        · Forks ${repo.forks_count}
+                    </div>
+                    <div class="stack">
+                        Updated: ${new Date(repo.updated_at).toLocaleDateString()}
+                    </div>
+                </article>
+            `).join("");
+        }
+
+        status.textContent =
+            `Connected to GitHub @${username}. Public profile loaded.`;
+
+    } catch (error) {
+        status.textContent = "GitHub connection: " + error.message;
+        list.innerHTML = "<p>Repository data is currently unavailable. Your portfolio still works.</p>";
+    }
+})();
+
+</script>
+</body>
+</html>

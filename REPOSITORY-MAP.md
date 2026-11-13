@@ -63,7 +63,6 @@ This file is a navigation guide to the public repositories owned by [@Draco10101
 ## Windows, gaming, and experiments
 
 - [speedup-winodws](https://github.com/Draco10101/speedup-winodws)
-- [WOT-BLITZ_USER_DRACO10101](https://github.com/Draco10101/WOT-BLITZ_USER_DRACO10101)
 - [SCRIPT-DECOMPILE](https://github.com/Draco10101/SCRIPT-DECOMPILE)
 - [SNAILBot](https://github.com/Draco10101/SNAILBot)
 - [T-Header](https://github.com/Draco10101/T-Header)
@@ -74,7 +73,6 @@ This file is a navigation guide to the public repositories owned by [@Draco10101
 - [https-github.com-Rajkumrdusad-Tool-X](https://github.com/Draco10101/https-github.com-Rajkumrdusad-Tool-X)
 - [oxproxion](https://github.com/Draco10101/oxproxion)
 - [sudo](https://github.com/Draco10101/sudo)
-- [gg](https://github.com/Draco10101/gg)
 
 ## Organization rules
 

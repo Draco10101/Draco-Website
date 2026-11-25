@@ -2,6 +2,10 @@
 
 **Live portfolio:** https://draco10101.github.io/Draco-Website/
 
+**Short domain / redirect alias:** https://widahitdigital.ing.ng
+
+The `widahitdigital.ing.ng` address currently forwards visitors to the GitHub Pages URL above. The redirect is managed by the `ing.ng` provider; this repository cannot change its redirect behavior or DNS settings. Keep the GitHub Pages URL as the canonical website URL unless the domain is later configured to point directly to GitHub Pages.
+
 This repository contains the DRACO1010 public portfolio website. It is the primary portfolio publishing repository; keep the website source, styles, scripts, and media assets together here.
 
 ## Repository layout

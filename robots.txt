@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://draco10101.github.io/Draco-Website/sitemap.xml
